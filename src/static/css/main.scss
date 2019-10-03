@@ -1,0 +1,19 @@
+@import "import/reset";
+@import "import/fonts";
+@import "import/vars";
+@import "import/mixin";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body.hidden {
+    overflow-y: hidden;
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
