@@ -5,6 +5,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    overflow-x: hidden;
 }
 
 body.hidden {
@@ -16,4 +19,413 @@ body.hidden {
     width: 100%;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+.info-menu {
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: $link-text;
+    }
+}
+
+.header-logo {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        font-family: "Gilroy-Black";
+        font-size: 24px;
+        line-height: 30px;
+        color: $link-text;
+        text-transform: uppercase;
+        margin-left: 5px;
+    }
+}
+
+.header-mobile {
+    @media(min-width: 992px) {
+        display: none;
+    }
+}
+
+.header-desktop {
+    @media(max-width: 991px) {
+        display: none;
+    }
+}
+
+.header-desktop__main {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .call {
+        @media(max-width: 1919px) {
+            display: none;
+        }
+    }
+
+    .search {
+        @media(min-width: 1280px) {
+            max-width: 500px;
+            width: 100%;
+        }
+        @media(min-width: 1600px) {
+            max-width: 700px;
+            width: 100%;
+        }
+    }
+}
+
+.cart-block {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    .online-pay {
+        margin-right: 13px;
+        @media(min-width: 1280px) {
+            margin-right: 63px;
+        }
+    }
+}
+
+.search {
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 52px;
+        font-weight: 400;
+        border: 3px solid $yellow;
+        font-size: 18px;
+        color: $grey;
+        padding-left: 54px;
+        padding-right: 110px;
+    }
+
+    button {
+        position: absolute;
+        width: 100px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $yellow;
+        color: $black;
+        text-transform: uppercase;
+        border: none;
+        height: 100%;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: -21px;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-top: 25px solid transparent;
+                border-left: 15px solid $yellow;
+                border-bottom: 25px solid transparent;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("../img/magnifying-glass.png") no-repeat center;
+    }
+}
+
+.online-pay {
+    display: inline-block;
+    border-radius: 4px;
+    background: $green;
+    text-align: center;
+    font-size: 14px;
+    padding: 19px 8px 16px;
+    text-transform: uppercase;
+    color: white;
+    @media(min-width: 1280px) {
+        font-size: 18px;
+        padding: 16px 38px;
+    }
+}
+
+.cart {
+    background: $bg;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    &__inner {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        color: $black;
+    }
+}
+
+.cart-img {
+    position: relative;
+    margin-right: 22px;
+
+    .cart-count {
+        position: absolute;
+        right: -12px;
+        top: -1px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        color: $black;
+        display: inline-block;
+        border-radius: 10em;
+        background: $yellow;
+        padding-top: 2px;
+    }
+}
+
+.call {
+    font-family: "Gilroy-Bold";
+    font-size: 32px;
+    display: inline-block;
+    padding-left: 33px;
+    color: $link-text;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: url("../img/call.png") no-repeat center;
+    }
+}
+
+.main-menu {
+    background: $link-text;
+    padding: 15px 0;
+
+    ul {
+        max-width: 1724px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: white;
+        font-size: 14px;
+        border-bottom: 1px dotted white;
+        display: inline-block;
+        margin-left: 36px;
+        position: relative;
+        @media(min-width: 1280px) {
+            font-size: 18px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .afisha {
+        &:after {
+            background: url("../img/masks.png") no-repeat center;
+        }
+    }
+
+    .opera {
+        &:after {
+            background: url("../img/harp.png") no-repeat center;
+        }
+    }
+
+    .balet {
+        &:after {
+            background: url("../img/ballerina.png") no-repeat center;
+        }
+    }
+
+    .hall {
+        &:after {
+            background: url("../img/chair.png") no-repeat center;
+        }
+    }
+
+    .travel {
+        &:after {
+            background: url("../img/placeholder.png") no-repeat center;
+        }
+    }
+
+    .company {
+        &:after {
+            background: url("../img/stage.png") no-repeat center;
+        }
+    }
+
+    .contacts {
+        &:after {
+            background: url("../img/column.png") no-repeat center;
+        }
+    }
+}
+
+.info-menu {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 10px auto 20px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .call {
+        @media(min-width: 1920px) {
+            display: none;
+        }
+    }
+}
+
+.header-mobile__top {
+    background: $link-text;
+    padding: 8px 13px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-mobile__logo {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-family: "Gilroy-Bold";
+        text-transform: uppercase;
+        color: white;
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 12px;
+        @media(min-width: 375px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.header-mobile__call {
+    font-family: "Gilroy-Bold";
+    display: inline-block;
+    margin-left: 22px;
+    color: white;
+    font-size: 16px;
+    @media(min-width: 375px) {
+        font-size: 18px;
+    }
+}
+
+.header-mobile__bottom {
+    background: white;
+    padding: 10px 13px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+        width: 200px;
+        @media(min-width: 375px) {
+            width: 240px;
+        }
+        @media(min-width: 768px) {
+            width: 600px;
+        }
+
+        input {
+            height: 40px;
+            padding-right: 10px;
+            font-size: 15px;
+            @media(min-width: 768px) {
+                height: 52px;
+                padding-right: 110px;
+            }
+        }
+
+        button {
+            display: none;
+            @media(min-width: 768px) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.date-btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url("../img/event.png") no-repeat center;
+}
+
+.burger {
+    width: 25px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $link-text;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
 }

@@ -1,91 +1,88 @@
-header
-    .header-desktop
-        .header-desktop__main
-            .header-desktop__logo
-                img(src="img/logo.png")
-
-            ul.main-menu
-                li
-                    a(href="#").main-menu__price Цены на ремонт
-                li
-                    a(href="#").main-menu__photo Фото работ
-                li
-                    a(href="#").main-menu__contact Контакты
-
-            .header-desktop__cont
-                button(type="button").btn Заказать услугу
-                a(href="tel:74951322575").header-desktop__call +7 (495) 132-25-75            
-
-        ul.header-desktop__links
-            li
-                a(href="#") Замена личинки замка
-            li
-                a(href="#") Замена замка зажигания
-            li
-                a(href="#") Ремонт контактной группы
-            li
-                a(href="#") Механический замок
-            li
-                a(href="#") Электронный замок
-            li
-                a(href="#") Замена замка зажигания
-
+header.header
     .header-mobile
-        .header-mobile__cont
-            span Москва
-            a(href="tel:74951322575") +7 (495) 132-25-75   
-
-        .header-mobile__menu
+        
+        .header-mobile__top
+            .header-mobile__logo
+                img(src="img/logo-white.png")
+                span Большой театр
+            a(href="tel:74954320777").header-mobile__call +7 495 432-07-77
+        
+        .header-mobile__bottom
             .burger
-                .burger__inner
-                    span
-                    span
-                    span
-                    span
-
-            .logo-mob
-                .logo-mob__img
-                    img(src="img/logo-mob.png")
-                .header-mobile__title Ремонт замков зажигания
-
-    .header-mobile__hidden
-        .link-list
-            .link-list__title Услуги
-            ul
+                span
+                span
+                span
+                span
+                    
+            form.search
+                input(type="text" placeholder="Балет Щелкунчик")
+                button(type="submit")
+                    span Найти                
+        
+            button.date-btn(type="button")
+    
+    
+    
+    
+    .header-desktop
+        .header-desktop__top
+            
+            ul.info-menu
                 li
-                    a(href="#").link-list__repair Ремонт замка зажигания
+                    a(href="#") О театре
                 li
-                    a(href="#").link-list__replace Замена замка зажигания
+                    a(href="#") Репертуар
                 li
-                    a(href="#").link-list__cylinder Замена личинки замка зажигания
+                    a(href="#") Премьеры
                 li
-                    a(href="#").link-list__switcher Переборка замка зажигания
+                    a(href="#") Доставка и оплата
                 li
-                    a(href="#").link-list__group Ремонт контактной группы
+                    a(href="#") Основная сцена
                 li
-                    a(href="#").link-list__insert Замена вставки замка зажигания
+                    a(href="#") Новая сцена
                 li
-                    a(href="#").link-list__repair Ремонт замка зажигания
-                li
-                    a(href="#").link-list__replace Замена замка зажигания
-                li
-                    a(href="#").link-list__cylinder Замена личинки замка зажигания
-                li
-                    a(href="#").link-list__switcher Переборка замка зажигания
-                li
-                    a(href="#").link-list__group Ремонт контактной группы
-                li
-                    a(href="#").link-list__insert Замена вставки замка зажигания  
-
-        .link-list
-            .link-list__title Информация
-            ul
-                li
-                    a(href="#").link-list__price Цены на ремонт
-                li
-                    a(href="#").link-list__photo Фото работ
-                li
-                    a(href="#").link-list__testemonials Отзывы
-                li
-                    a(href="#").link-list__contact Контакты                                          
+                    a(href="tel:74954113073").call +7 (495) 411-30-73    
+                
+        .header-desktop__bottom
+            .header-desktop__main.container
+                
+                .header-logo
+                    .header-logo__img
+                        img(src="img/logo.png")
+                    .header-logo__text
+                        |Большой<br> театр
+                
+                form.search
+                    input(type="text" placeholder="Балет Щелкунчик")
+                    button(type="submit")
+                        span Найти
+                                
+                .cart-block
+                    a(href="#").online-pay Онлайн оплата
+                    a(href="#").cart
+                        .cart__inner
+                            .cart-img
+                                img(src="img/cart.png")
+                                .cart-count
+                                    |4
+                            span 1200 руб.
+                
+                a(href="tel:74954113073").call +7 (495) 411-30-73
+            
+            nav.main-menu
+                ul
+                    li
+                        a(href="#").afisha Афиша большого театра                        
+                    li
+                        a(href="#").opera Опера 
+                    li
+                        a(href="#").balet Балет 
+                    li
+                        a(href="#").hall Схема зала 
+                    li
+                        a(href="#").travel Схема проезда
+                    li
+                        a(href="#").company О компании
+                    li
+                        a(href="#").contacts Контакты              
                     
