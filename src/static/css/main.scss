@@ -24,9 +24,23 @@ body.hidden {
     }
 }
 
-.content {
+.main-title {
+    font-size: 24px;
+    color: #B53759;
+    font-weight: 500;
+    margin-bottom: 15px;
     @media(min-width: 992px) {
-        width: calc(100% - 370px);
+        font-size: 32px;
+    }
+}
+
+.content {
+    p {
+        font-size: 18px;
+        color: #555A66;
+    }
+    @media(min-width: 992px) {
+        width: calc(100% - 346px);
     }
 }
 
@@ -944,9 +958,9 @@ body.hidden {
         @media(min-width: 992px) {
             display: none;
         }
+
         &:after {
             background: url("../img/arrow_forward-b.png") no-repeat center;
-
         }
     }
 
@@ -1072,25 +1086,185 @@ body.hidden {
         &__title {
             max-width: 260px;
             width: 100%;
-            display: inline-block;
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 14px;
-            @media(min-width: 992px) {
-                font-size: 18px;
-            }
-
-            a {
-                color: $link-text;
-                border-bottom: 1px dotted $link-text;
-            }
         }
     }
 }
 
-.poster {
+.item__title {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    @media(min-width: 992px) {
+        font-size: 18px;
+    }
+
+    a {
+        color: $link-text;
+        border-bottom: 1px dotted $link-text;
+    }
+}
+
+.poster-main {
     padding-bottom: 56px;
     margin-bottom: 15px;
     border-bottom: 2px solid #DADADA;
     overflow: hidden;
+}
+
+.theatre-about {
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.performance-item {
+    width: 290px;
+    height: 424px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.4s;
+    margin: 5px;
+    @media(min-width: 992px) {
+        margin: 3px;
+    }
+    @media(min-width: 1280px) {
+        margin: 2px;
+    }
+    @media(min-width: 1366px) {
+        margin: 5px;
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .item__title {
+        margin-bottom: 18px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: auto;
+    }
+}
+
+.performance__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media(min-width: 992px) {
+        justify-content: flex-start;
+    }
+}
+
+.premiera {
+    background: #FDFA9B;
+    border-radius: 4px;
+    padding: 5px 6px;
+    margin-bottom: 14px;
+}
+
+.performance-item__adress {
+    font-weight: 500;
+    font-size: 16px;
+    color: #555A66;
+}
+
+.performance-item__place {
+    font-size: 16px;
+    margin: 12px 0 18px;
+    color: #555A66;
+}
+
+.performance__img {
+    img {
+        display: block;
+    }
+}
+
+.performance-item__info {
+    height: 230px;
+    background: #F9EBC9;
+    padding: 10px 10px 17px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.performance-item__age {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-family: "Gilroy-Bold";
+    width: 44px;
+    height: 44px;
+    background: rgba(243, 119, 120, 0.8);
+    border: 2px solid rgba(255, 91, 93, 0.85);
+    border-radius: 10em;
+    color: white;
+    font-size: 22px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.performance__more {
+    display: block;
+    text-align: center;
+    padding: 25px 0;
+    border-bottom: 2px solid #DADADA;
+    margin-bottom: 20px;
+}
+
+.article-list {
+    list-style: initial;
+    color: #555A66;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 13px;
+        }
+    }
+}
+
+.theatre-video {
+    .article-list {
+        padding-left: 15px;
+        margin-top: 25px;
+    }
+}
+
+.theatre-video {
+    margin-bottom: 50px;
+    @media(min-width: 992px) {
+        margin-bottom: 108px;
+    }
+    @media(min-width: 1366px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        &:first-child {
+            @media(min-width: 1366px) {
+                width: 40%;
+                margin-right: 24px;
+            }
+        }
+
+        &:last-child {
+            @media(min-width: 1366px) {
+                width: 70%;
+            }
+        }
+    }
 }
