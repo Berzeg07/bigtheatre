@@ -19,7 +19,48 @@ $(document).ready(function() {
         $('.header-mobile__hidden').slideToggle();
         $('body').toggleClass('hidden');
     });
+    //
+    // $('.poster-slider').owlCarousel({
+    //     center: true,
+    //     items: 2,
+    //     loop: false,
+    //     margin: 27,
+    //     responsive: {
+    //         600: {
+    //             items: 4
+    //         }
+    //     }
+    // });
 
+    var swiper = new Swiper('.poster-slider', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            992: {
+                slidesPerView: 3
+            },
+            1280: {
+                slidesPerView: 4
+            }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Calendar *
     function calendar(id, year, month) {
         var Dlast = new Date(year, month + 1, 0).getDate(),
             D = new Date(year, month, Dlast),
