@@ -1,0 +1,349 @@
+main
+    .main-cont.container
+        include ./sidebar.pug
+        .content
+            .performance-info
+                .performance-info__item
+                    include ./breadcrumbs.pug
+                    h1.main-title Один лень Ивана Денисовича
+                    
+                    .performance-info__inner
+                        .performance-info__img
+                            img(src="img/mirk3.jpg")
+                            .performance-item__age
+                                |12+
+                                
+                        ul.performance-info__link
+                            li
+                                a(href="#") Публикации о спектакле
+                            li
+                                a(href="#") Комментарии зрителей (7)    
+                    
+                    ul.performance-info__list.performance-info__list_main
+                        li Александр Чайковский
+                        li Один день Ивана Денисовича
+                        li Опера в двух действиях
+                        li 12+
+                        li Камерная сцена им. Б.А. Покровского (ул. Никольская, 17/1) Премьера состоялась 7 декабря 2018 г.
+                    
+                    .content-article
+                        p Либретто Александра Чайковского и Георгия Исаакяна<br> по одноименной повести Александра Солженицына
+                        
+                        ul.performance-info__list
+                            li Композитор — Александр Чайковский
+                            li Дирижер-постановщик — Игнат Солженицын
+                            li Режиссер-постановщик — Георгий Исаакян
+                            li Сценограф и художник по костюмам — Алексей Вотяков
+                            li Художник по свету — Айвар Салихов
+                            li Хормейстеры — Александр Рыбнов, Павел Сучков 
+                            li Ассистент дирижера-постановщика — Айрат Кашаев
+                        
+                        ul.performance-info__list
+                            li Действующие лица и исполнители:
+                            li Дирижер - Игнат Солженицын
+                            li Алешка, баптист - Александр Чернов, Михаил Яненко
+                            li Татарин - Виктория Преображенская, Ульяна Разумная
+                            li Иван Денисович Шухов - Игорь Вялых, Захар Ковалёв
+                            li Надзиратель - Анатолий Захаров, Алексей Смирнов, Кирилл Филин
+                            li Коля, фельдшер - Василий Гафнер, Василий Матвеев
+                            li Павло - Сергей Байков, Алексей Прокопьев
+                            li Тюрин, бригадир - Кирилл Филин, Давид Целаури, Роман Шевчук
+                            li Волковой, лейтенант - Алексей Морозов, Алексей Прокопьев
+                            li Кавторанг Буяновский - Александр Полковников, Василий Соколов
+                            li Фетюков - Борислав Молчанов, Виталий Родин
+                            li Цезарь Маркович - Александр Маркеев, Алексей Мочалов, Герман Юкавский
+                            li Жена Шухова - Ирина Алексеенко, Анна Бауман, Татьяна Федотова
+                            li Ян Кильдигс, латыш - Павел Паремузов, Алексей Сулимов
+                            li Х-123 (Петр Михалыч) - Василий Соколов, Андрей Цветков-Толбин
+                            li Сенька - Василий Матвеев, Виталий Родин
+                            li Комполка - Александр Маркеев, Алексей Мочалов, Герман Юкавский
+                            li Дэр, десятник - Ольга Дейнека-Бостон, Мария Патрушева
+                            li Девушки - Марианна Асвойнова, Ольга Бурмистрова, Александра Наношкина
+                            li Наталья Риттер, Анна Семенюк, Ирина Хрулева
+                            li Надзиратели - Александр Колесников, Нарул Тойкенов
+                
+                .performance-info__item
+                    ul.choose-ticket
+                        li 
+                            .choose-ticket__item
+                                .choose-ticket__date 21 сентября 19:00
+                                span Камерная сцена им. Б.А. Покровского
+                            .choose-ticket__item
+                                a(href="#").btn.btn-ticket Выбрать билет
+                                
+                        li 
+                            .choose-ticket__item
+                                .choose-ticket__date 22 сентября 19:00
+                                span Камерная сцена им. Б.А. Покровского
+                            .choose-ticket__item
+                                a(href="#").btn.btn-ticket Выбрать билет
+                            
+                        li 
+                            .choose-ticket__item
+                                .choose-ticket__date 05 декабря 19:00
+                                span Камерная сцена им. Б.А. Покровского
+                            .choose-ticket__item
+                                a(href="#").btn.btn-ticket Выбрать билет
+                        
+                        li 
+                            .choose-ticket__item
+                                .choose-ticket__date 06 декабря 19:00
+                                span Камерная сцена им. Б.А. Покровского
+                            .choose-ticket__item
+                                a(href="#").btn.btn-ticket Выбрать билет
+                
+                        li 
+                            .choose-ticket__item
+                                .choose-ticket__date 07 декабря 19:00
+                                span Камерная сцена им. Б.А. Покровского
+                            .choose-ticket__item
+                                a(href="#").btn.btn-ticket Выбрать билет
+                        
+                    .performance-info__video
+                        <iframe width="100%" height="342" src="https://www.youtube.com/embed/fydtybn2NdA?start=56" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            .performance-about
+                h2.main-title Купить билеты на спектакль "Один день Ивана Денисовича" в Большом театре
+                
+                .date-select
+                    span Выберите дату спектакля
+                    .select-custom
+                        select
+                            option(value="21 сентября 12:00") 21 сентября 12:00
+                            option(value="22 сентября 12:00") 22 сентября 17:00
+                            option(value="23 сентября 12:00") 23 сентября 19:00
+                            
+                .choose-place
+                    |Вы можете выбрать билеты из списка или 
+                    a(href="#") оставить заявку на интересующие вас места            
+                            
+                .order
+                    .order__main
+                        .order__item
+                            
+                            .performance-date
+                                .performance-date__inner
+                                    .performance-date__num 21
+                                    .performance-date__day
+                                        span Марта
+                                        span Вторник    
+                                
+                            
+                            ul.performance-time 
+                                li 19:00
+                                li Новая сцена
+                            
+                        ul.order__tickets
+                            li 
+                                a(href="#") Один день Ивана Денисовича
+                                <br>
+                                span Опера в трех действиях 18+
+                            li
+                                b Осталось билетов: 19
+                        
+                        ul.order__action
+                            li
+                                .order__price от 2500 руб. до 5 200 руб.
+                            li 
+                                .btn.btn-blue Выбрать на схеме                 
+                    
+                    .order__hidden.order__show
+                            ul.order__list
+                                li среда, 11 сентября 2019 в 19:00
+                                li Большой театр
+                                li Новая сцена
+                            
+                            .places
+                                ul.places__yarus
+                                    li 1-й ярус
+                                    li 4 ряд
+                                    li 9 000 руб.
+                                
+                                .places__item
+                                    .places__slider.swiper-container
+                                        .swiper-wrapper
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 12
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 13
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 14
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 15
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 16
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 17
+                                                    button.places__tooltip
+                                                        span в корзину            
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 18
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 19
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 12
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 13
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 14
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 15
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 16
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 17
+                                                    button.places__tooltip
+                                                        span в корзину            
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 18
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 19
+                                                    button.places__tooltip
+                                                        span в корзину
+                                        .swiper-button-next
+                                    
+                                .places__price 9 000 руб.    
+                            
+                            .places
+                                ul.places__yarus
+                                    li 1-й ярус
+                                    li 2 ряд
+                                    li 9 000 руб.
+                                
+                                .places__item
+                                    .places__slider.swiper-container
+                                        .swiper-wrapper
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 12
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 13
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 14
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 15
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 16
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 17
+                                                    button.places__tooltip
+                                                        span в корзину            
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 18
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 19
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 12
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 13
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 14
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 15
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 16
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 17
+                                                    button.places__tooltip
+                                                        span в корзину            
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 18
+                                                    button.places__tooltip
+                                                        span в корзину
+                                            .item.swiper-slide
+                                                .product
+                                                    .places__buy 19
+                                                    button.places__tooltip
+                                                        span в корзину
+                                        .swiper-button-next
+                                    
+                                .places__price 9 000 руб. 
+                    .btn.btn-blue.btn__order_mob Выбрать на схеме 
+                                       
+                
+                        
+                        
+                        
+                        
+                        
+                        
