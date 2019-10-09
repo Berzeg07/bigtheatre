@@ -1826,9 +1826,9 @@ body.hidden {
 
 .places__slider {
     max-width: 590px;
-    padding: 26px 0 5px;
+    padding: 30px 0 5px;
     @media(min-width: 768px) {
-        padding: 26px 0 5px 35px;
+        padding: 30px 0 5px 35px;
     }
     @media(min-width: 1280px) {
         max-width: 800px;
@@ -1842,7 +1842,7 @@ body.hidden {
     .swiper-button-next {
         right: 0;
         width: 58px;
-        height: 46px;
+        height: 48px;
         cursor: pointer;
         margin-top: 0;
         top: 50%;
@@ -1892,7 +1892,7 @@ body.hidden {
     .places__tooltip {
         position: absolute;
         width: 70px;
-        top: -31px;
+        top: -33px;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
@@ -1972,7 +1972,7 @@ body.hidden {
     font-size: 14px;
     color: #555A66;
     padding-left: 10px;
-    @media(min-width: 1600px){
+    @media(min-width: 1600px) {
         padding-top: 15px;
     }
 
@@ -2002,4 +2002,69 @@ body.hidden {
     @media(min-width: 1280px) {
         display: none;
     }
+}
+
+.date-select {
+    padding-left: 15px;
+    margin-bottom: 22px;
+    @media(min-width: 500px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 500;
+        color: #B53759;
+        display: inline-block;
+        margin-bottom: 8px;
+        @media(min-width: 500px) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.link-text {
+    color: #4A64EA;
+    text-decoration: underline;
+}
+
+.performance-gallery {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    &__item {
+        width: 204px;
+    }
+
+    &__article {
+        text-align: center;
+        margin-top: 16px;
+        color: #555A66;
+    }
+
+    &__more{
+        color: #B53759;
+    }
+
+    &__inner {
+        max-width: 1260px;
+        width: 100%;
+        margin-bottom: 32px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media(min-width: 992px) {
+        margin-top: 48px;
+        margin-bottom: 82px;
+    }
+}
+
+.choose-place {
+    padding-left: 15px;
+    margin-bottom: 24px;
 }

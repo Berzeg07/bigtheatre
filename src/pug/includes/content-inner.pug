@@ -106,7 +106,7 @@ main
                 h2.main-title Купить билеты на спектакль "Один день Ивана Денисовича" в Большом театре
                 
                 .date-select
-                    span Выберите дату спектакля
+                    span.date-select__text Выберите дату спектакля:
                     .select-custom
                         select
                             option(value="21 сентября 12:00") 21 сентября 12:00
@@ -115,7 +115,7 @@ main
                             
                 .choose-place
                     |Вы можете выбрать билеты из списка или 
-                    a(href="#") оставить заявку на интересующие вас места            
+                    a(href="#").link-text оставить заявку на интересующие вас места            
                             
                 .order
                     .order__main
@@ -339,8 +339,47 @@ main
                                     
                                 .places__price 9 000 руб. 
                     .btn.btn-blue.btn__order_mob Выбрать на схеме 
-                                       
+            
+            .performance-gallery
+                .performance-gallery__inner
+                    .performance-gallery__item
+                        img(src="img/icon.jpg")
+                        .performance-gallery__article
+                            |Лебединое озеро    
+                                           
+                    .performance-gallery__item
+                        img(src="img/icon-5.jpg")
+                        .performance-gallery__article
+                            |Лебединое озеро. Балет 
+                                        
+                    .performance-gallery__item
+                        img(src="img/icon-4.jpg")
+                        .performance-gallery__article
+                            |Лебединое озеро
+                            
+                    .performance-gallery__item
+                        img(src="img/icon-3.jpg")
+                        .performance-gallery__article
+                            |Лебединое озеро - визитная карточка Большого              
+                    
+                    .performance-gallery__item
+                        img(src="img/icon-2.jpg")
+                        .performance-gallery__article
+                            |Всемирно известный балет "Лебединое озеро"          
                 
+                .performance-gallery__more
+                    |Также рекомендуем 
+                    a(href="#").link-text заказать билеты с доставкой 
+                    |на самые яркие и интересные балеты Большого театра: 
+                    a(href="#").link-text Корсар,
+                    a(href="#").link-text  Спартак, 
+                    a(href="#").link-text Жизель, 
+                    a(href="#").link-text Щелкунчик, 
+                    a(href="#").link-text Дон Кихот, 
+                    a(href="#").link-text Дочь Фараона, 
+                    a(href="#").link-text Спящая красавица, 
+                    a(href="#").link-text Баядерка, 
+                    |и другие.
                         
                         
                         
