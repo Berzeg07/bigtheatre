@@ -20,6 +20,25 @@ $(document).ready(function() {
         $('body').toggleClass('hidden');
     });
 
+    // Buy ticket *
+    $('.btn_ticket').click(function() {
+        $(this).addClass('active');
+        $(this).html('Выбрать на схеме');
+        var parent = $(this).parents('.order');
+        parent.find('.close-btn').addClass('active');
+        parent.find('.order__hidden').slideDown();
+        $('.close-btn').click(function() {
+            $(this).removeClass('active');
+            var btn = parent.find('.btn_ticket');
+            btn.removeClass('active');
+            btn.html('Выбрать билет');
+
+            parent.find('.order__hidden').slideUp();
+        });
+    });
+
+
+
     // custom select *
     $('.select-custom select').select2();
     // place slider *
@@ -38,6 +57,7 @@ $(document).ready(function() {
     var swiper = new Swiper('.poster-slider', {
         slidesPerView: 4,
         spaceBetween: 30,
+
         breakpoints: {
             0: {
                 slidesPerView: 1
@@ -68,6 +88,9 @@ $(document).ready(function() {
         slidesPerView: 3,
         // spaceBetween: 5,
         loop: false,
+        autoplay: {
+            delay: 1000,
+        },
         breakpoints: {
             320: {
                 slidesPerView: 6
