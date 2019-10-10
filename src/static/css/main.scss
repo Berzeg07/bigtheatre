@@ -2807,3 +2807,35 @@ body.hidden {
 .btn_confirm {
     width: 100%;
 }
+
+.premiere {
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    li {
+        margin-bottom: 18px;
+        @media(min-width: 768px) {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__date {
+        color: #B53759;
+        font-weight: 500;
+        margin-bottom: 5px;
+        @media(min-width: 768px) {
+            max-width: 280px;
+            width: 100%;
+        }
+    }
+
+    &__article {
+        a {
+            color: #4A64EA;
+            text-decoration: underline;
+        }
+    }
+}
