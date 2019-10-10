@@ -1,0 +1,141 @@
+main
+    .main-cont.container
+        include ./sidebar.pug
+        .content
+            .breadcrumbs
+                a(href="#") Главная
+                a(href="#") Оформление заказа
+                
+            h1.main-title Вы положили в корзину следующие билеты:   
+            
+            .order.order_basket    
+                .order__header
+                    .order__title Когда событие
+                    .order__title Название
+                    .order__title Место
+                    .order__title Цена
+                    .order__title Удалить
+                
+                .order__main
+                    .delete-order.delete-order_mob  
+                    .order__inner.order__inner_date 
+                        .order__title.order__title_mob
+                            |Когда событие
+                            
+                        .order__item    
+                            .performance-date
+                                .performance-date__inner
+                                    .performance-date__num 21
+                                    .performance-date__day
+                                        span Сентября
+                                        span Воскресенье   
+                                
+                            ul.performance-time 
+                                li 19:00
+                                li Новая сцена
+                    
+                    .order__inner.order__inner_name
+                        .order__title.order__title_mob
+                            |Название
+                        .order__tickets                
+                            a(href="#") Весна священная. Компания современного танца Павлин/ Китай
+                    
+                    .order__inner.order__inner_place
+                        .order__title.order__title_mob
+                            |Место
+                        .order__place Партер - 1 ряд, 19 место
+                    
+                    .order__inner.order__inner_price
+                        .order__title.order__title_mob
+                            |Цена
+                        .order__price 12 000 руб.
+                    
+                    .order__inner.order__inner_delete
+                        .order__title.order__title_mob
+                            |Удалить
+                        .delete-order        
+                .order__main
+                    .delete-order.delete-order_mob  
+                    .order__inner.order__inner_date 
+                        .order__title.order__title_mob
+                            |Когда событие
+                            
+                        .order__item    
+                            .performance-date
+                                .performance-date__inner
+                                    .performance-date__num 21
+                                    .performance-date__day
+                                        span Сентября
+                                        span Воскресенье   
+                                
+                            ul.performance-time 
+                                li 19:00
+                                li Новая сцена
+                    
+                    .order__inner.order__inner_name
+                        .order__title.order__title_mob
+                            |Название
+                        .order__tickets                
+                            a(href="#") Весна священная. Компания современного танца Павлин/ Китай
+                    
+                    .order__inner.order__inner_place
+                        .order__title.order__title_mob
+                            |Место
+                        .order__place Партер - 1 ряд, 19 место
+                    
+                    .order__inner.order__inner_price
+                        .order__title.order__title_mob
+                            |Цена
+                        .order__price 12 000 руб.
+                    
+                    .order__inner.order__inner_delete
+                        .order__title.order__title_mob
+                            |Удалить
+                        .delete-order   
+            
+            .total-price
+                |Итого: билетов 2 на сумму 24000 руб.
+        
+            form.confirm-form(action="#")
+                .confirm-form__inner
+                    .confirm-form__title Оформление заказа
+                    
+                    .confirm-form__top
+                        label.inp-wrap.inp-wrap_name
+                            input(type="text" placeholder="Имя").inp
+                        label.inp-wrap.inp-wrap_email
+                            input(type="text" placeholder="Телефон/E-mail").inp
+                        label.inp-wrap.inp-wrap_adress
+                            input(type="text" placeholder="Адрес доставки").inp
+                                
+                    .confirm-form__bottom
+                        .confirm-form__item
+                            label.text-wrap.text-wrap_confirm
+                                textarea.textarea Комментарий к заказу
+                                
+                            ul.payment-check
+                                li
+                                    |Способ оплаты:
+                                li
+                                    .custom-check.custom-check_blue
+                                        input(type="radio" style="display: none" name="payment" checked)#checkCash
+                                        label(for="checkCash")
+                                            |Оплата наличными
+                                li
+                                    .custom-check.custom-check_blue
+                                        input(type="radio" style="display: none" name="payment")#checkCard
+                                        label(for="checkCard")
+                                            |Оплата банковской картой                
+                            
+                        .confirm-form__item
+                            button(type="submit").btn.btn_confirm Оформить заказ
+                            .custom-check.custom-check_white.custom-check_confirm
+                                input(type="checkbox" style="display: none" checked)#checkPrivacy
+                                label(for="checkPrivacy")
+                                    |Я согласен на обработку <br> персональных данных 
+                
+                
+            
+            
+
+            

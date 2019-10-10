@@ -74,7 +74,7 @@ body.hidden {
 }
 
 .main-title {
-    font-size: 24px;
+    font-size: 22px;
     color: #B53759;
     font-weight: 500;
     margin-bottom: 15px;
@@ -83,12 +83,23 @@ body.hidden {
     }
 }
 
+.delete-order {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    cursor: pointer;
+    background: url("../img/close.png") no-repeat center;
+}
+
 .content {
     p {
         font-size: 18px;
         color: #555A66;
     }
     @media(min-width: 992px) {
+        width: calc(100% - 280px);
+    }
+    @media(min-width: 1600px) {
         width: calc(100% - 346px);
     }
 }
@@ -780,10 +791,13 @@ body.hidden {
 }
 
 .sidebar {
-    width: 346px;
+    width: 280px;
     padding: 12px 24px 12px 0;
     @media(max-width: 991px) {
         display: none;
+    }
+    @media(min-width: 1600px) {
+        width: 346px;
     }
 
     &__title {
@@ -1853,6 +1867,175 @@ body.hidden {
     }
 }
 
+.delete-order_mob {
+    position: absolute;
+    right: -2px;
+    top: -3px;
+    @media(min-width: 1280px) {
+        display: none;
+    }
+}
+
+.order_basket {
+    border: none;
+
+    .order__tickets a {
+        margin-bottom: 0;
+    }
+
+    .order__item {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .performance-date__num {
+        @media(max-width: 1919px) {
+            font-size: 40px;
+        }
+    }
+
+    .performance-date__day span:first-child {
+        @media(max-width: 1919px) {
+            font-size: 20px;
+        }
+    }
+
+    .performance-date__day span:last-child {
+        @media(max-width: 1919px) {
+            font-size: 15px;
+        }
+    }
+
+    .order__main {
+        position: relative;
+        padding: 25px 2px 0;
+        margin-bottom: 25px;
+        border: 1px solid #E5E5E5;
+        @media(min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        @media(min-width: 1280px) {
+            padding: 0;
+            border: none;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .order__inner {
+            padding-bottom: 15px;
+            @media(min-width: 768px) {
+                width: 50%;
+                text-align: center;
+                padding: 5px;
+            }
+            @media(min-width: 1280px) {
+                padding: 0;
+            }
+
+            &:last-child {
+                @media(max-width: 1279px) {
+                    display: none;
+                }
+            }
+        }
+        @media(min-width: 1280px) {
+            .order__inner_date {
+                width: 30%;
+
+                .order__item {
+                    margin: 0 auto;
+                }
+            }
+
+            .order__inner_name {
+                width: 20%;
+                text-align: left;
+            }
+
+            .order__inner_place {
+                width: 20%;
+
+                .order__place {
+                    text-align: center;
+                }
+            }
+
+            .order__inner_price {
+                width: 15%;
+
+                .order__price {
+                    text-align: center;
+                }
+            }
+
+            .order__inner_delete {
+                width: 15%;
+            }
+        }
+    }
+
+    .order__title_mob {
+        padding: 5px 0;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+        @media(min-width: 1280px) {
+            display: none;
+        }
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.order__title {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    color: #555A66;
+    background: #F9EBC9;
+}
+
+.order__header {
+    display: none;
+
+    .order__title {
+        @media(min-width: 1280px) {
+            margin-bottom: 25px;
+        }
+    }
+    @media(min-width: 1280px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        .order__title {
+            &:nth-child(1) {
+                width: 30%;
+            }
+
+            &:nth-child(2) {
+                width: 20%;
+                text-align: left;
+            }
+
+            &:nth-child(3) {
+                width: 20%;
+            }
+
+            &:nth-child(4) {
+                width: 15%;
+            }
+
+            &:nth-child(5) {
+                width: 15%;
+            }
+        }
+    }
+}
+
 .places__price {
     color: #555A66;
     font-weight: 500;
@@ -2318,7 +2501,7 @@ body.hidden {
         color: #B53759;
         margin-bottom: 27px;
         text-align: center;
-        @media(min-width: 768px){
+        @media(min-width: 768px) {
             font-size: 24px;
         }
     }
@@ -2362,6 +2545,7 @@ body.hidden {
 }
 
 .textarea {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     background: white;
     border-radius: 3px;
@@ -2450,4 +2634,176 @@ body.hidden {
             background: #B53759;
         }
     }
+}
+
+.total-price {
+    margin-bottom: 26px;
+    font-weight: 500;
+    color: #B53759;
+}
+
+.confirm-form {
+    background: #F9EBC9;
+    border-radius: 10px;
+    padding: 30px 10px;
+    margin-bottom: 25px;
+
+    &__title {
+        font-size: 24px;
+        color: #B53759;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.confirm-form__top {
+    @media(min-width: 1100px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        label {
+            max-width: 400px;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.confirm-form__bottom {
+    @media(min-width: 1280px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        .confirm-form__item {
+            &:first-child {
+                max-width: 830px;
+                width: 100%;
+                margin-right: 30px;
+            }
+
+            &:last-child {
+                max-width: 400px;
+                width: 100%;
+
+                .btn {
+                    height: 90px;
+                }
+            }
+        }
+    }
+}
+
+.inp-wrap_adress,
+.inp-wrap_email,
+.inp-wrap_name {
+    position: relative;
+
+    input {
+        padding-left: 60px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: url("../img/man.png") no-repeat center;
+    }
+}
+
+.inp-wrap_name {
+    &:after {
+        background: url("../img/man.png") no-repeat center;
+    }
+}
+
+.inp-wrap_adress {
+    &:after {
+        background: url("../img/check-list.png") no-repeat center;
+    }
+}
+
+.inp-wrap_email {
+    &:after {
+        background: url("../img/cont.png") no-repeat center;
+    }
+}
+
+.confirm-form__inner {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-wrap_confirm {
+    position: relative;
+    margin-bottom: 25px;
+
+    textarea {
+        padding-left: 60px;
+        height: 90px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: 12px;
+        width: 30px;
+        height: 30px;
+        background: url("../img/resume.png") no-repeat center;
+    }
+}
+
+.payment-check {
+    margin-bottom: 15px;
+    @media(min-width: 768px) {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        &:first-child {
+            color: #555A66;
+        }
+        margin-bottom: 10px;
+        @media(min-width: 768px) {
+            &:not(:last-child) {
+                margin-right: 37px;
+            }
+        }
+    }
+}
+
+.custom-check_blue {
+    label {
+        &:before {
+            background: url("../img/check-white.png") no-repeat center;
+        }
+    }
+
+    input:checked+label {
+        &:after {
+            background: #2BA5F7;
+        }
+    }
+}
+
+.custom-check_confirm {
+    margin-top: 20px;
+}
+
+.btn_confirm {
+    width: 100%;
 }
